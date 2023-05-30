@@ -1,0 +1,160 @@
+{"level":30,"time":"2023-05-29T23:50:26.495Z","pid":112624,"hostname":"atech","msg":"Listening on 36513"}
+{"level":30,"time":"2023-05-29T23:50:26.516Z","pid":112624,"hostname":"atech","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-05-29T23:50:26.517Z","pid":112624,"hostname":"atech","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-05-29T23:50:26.519Z","pid":112624,"hostname":"atech","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-05-29T23:50:26.520Z","pid":112624,"hostname":"atech","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-05-29T23:50:26.524Z","pid":112624,"hostname":"atech","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2023-05-29T23:50:26.725Z","pid":112624,"hostname":"atech","msg":"End of node method newBrowser"}
+{"level":30,"time":"2023-05-29T23:50:26.729Z","pid":112624,"hostname":"atech","msg":"Start of node method newPage"}
+{"level":30,"time":"2023-05-29T23:50:26.729Z","pid":112624,"hostname":"atech","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2023-05-29T23:50:26.738Z","pid":112624,"hostname":"atech","msg":"Changed active context"}
+{"level":30,"time":"2023-05-29T23:50:26.878Z","pid":112624,"hostname":"atech","msg":"Video path: undefined"}
+{"level":30,"time":"2023-05-29T23:50:26.878Z","pid":112624,"hostname":"atech","msg":"Changed active page"}
+{"level":30,"time":"2023-05-29T23:50:27.462Z","pid":112624,"hostname":"atech","msg":"End of node method newPage"}
+{"level":30,"time":"2023-05-29T23:50:27.468Z","pid":112624,"hostname":"atech","msg":"Start of node method getText"}
+{"level":30,"time":"2023-05-29T23:50:27.468Z","pid":112624,"hostname":"atech","msg":"Strict mode is enabled, find Locator with css=form h1 in page."}
+{"level":30,"time":"2023-05-29T23:50:27.510Z","pid":112624,"hostname":"atech","msg":"Retrieved text for element css=form h1 containing Faça seu cadastro"}
+{"level":30,"time":"2023-05-29T23:50:27.510Z","pid":112624,"hostname":"atech","msg":"End of node method getText"}
+{"level":30,"time":"2023-05-29T23:50:27.514Z","pid":112624,"hostname":"atech","msg":"Start of node method fillText"}
+{"level":30,"time":"2023-05-29T23:50:27.515Z","pid":112624,"hostname":"atech","msg":"Strict mode is enabled, find Locator with css=input[name=email] in page."}
+{"level":30,"time":"2023-05-29T23:50:27.542Z","pid":112624,"hostname":"atech","msg":"End of node method fillText"}
+{"level":30,"time":"2023-05-29T23:50:27.545Z","pid":112624,"hostname":"atech","msg":"Start of node method fillText"}
+{"level":30,"time":"2023-05-29T23:50:27.545Z","pid":112624,"hostname":"atech","msg":"Strict mode is enabled, find Locator with css=input[name=password] in page."}
+{"level":30,"time":"2023-05-29T23:50:27.562Z","pid":112624,"hostname":"atech","msg":"End of node method fillText"}
+{"level":30,"time":"2023-05-29T23:50:27.565Z","pid":112624,"hostname":"atech","msg":"Start of node method click"}
+{"level":30,"time":"2023-05-29T23:50:27.565Z","pid":112624,"hostname":"atech","msg":"Strict mode is enabled, find Locator with css=button[type=submit] >> text=Cadastrar in page."}
+{"level":30,"time":"2023-05-29T23:50:27.624Z","pid":112624,"hostname":"atech","msg":"End of node method click"}
+{"level":30,"time":"2023-05-29T23:50:27.629Z","pid":112624,"hostname":"atech","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2023-05-29T23:50:27.630Z","pid":112624,"hostname":"atech","msg":"Strict mode is enabled, find Locator with css=small[class=alert-error] in page."}
+{"level":30,"time":"2023-05-29T23:50:27.637Z","pid":112624,"hostname":"atech","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2023-05-29T23:50:27.642Z","pid":112624,"hostname":"atech","msg":"Start of node method getText"}
+{"level":30,"time":"2023-05-29T23:50:27.642Z","pid":112624,"hostname":"atech","msg":"Strict mode is enabled, find Locator with css=small[class=alert-error] in page."}
+{"level":30,"time":"2023-05-29T23:50:27.653Z","pid":112624,"hostname":"atech","msg":"Retrieved text for element css=small[class=alert-error] containing Informe seu nome completo"}
+{"level":30,"time":"2023-05-29T23:50:27.653Z","pid":112624,"hostname":"atech","msg":"End of node method getText"}
+{"level":30,"time":"2023-05-29T23:50:29.658Z","pid":112624,"hostname":"atech","msg":"Start of node method closeBrowser"}
+{"level":30,"time":"2023-05-29T23:50:29.673Z","pid":112624,"hostname":"atech","msg":"Removed page=72dd0e5e-49bd-488d-b900-d5aa8e962c53 from context=5e812f40-564b-4aa1-8be0-a61c4ac8eb4c page stack"}
+{"level":30,"time":"2023-05-29T23:50:29.751Z","pid":112624,"hostname":"atech","msg":"End of node method closeBrowser"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/home/oseiascaleb/.local/lib/python3.10/site-packages/Browser/wrapper/index.js:9406:15)
+    at PlaywrightServer.getActiveBrowser (/home/oseiascaleb/.local/lib/python3.10/site-packages/Browser/wrapper/index.js:9952:59)
+    at PlaywrightServer.setTimeout (/home/oseiascaleb/.local/lib/python3.10/site-packages/Browser/wrapper/index.js:10197:69)
+    at /home/oseiascaleb/.local/lib/python3.10/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (/home/oseiascaleb/.local/lib/python3.10/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:395:13)
+    at ServerHttp2Stream.onEnd (/home/oseiascaleb/.local/lib/python3.10/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:382:22)
+    at ServerHttp2Stream.emit (node:events:525:35)
+    at endReadableNT (node:internal/streams/readable:1358:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+=============================================================
+{"level":30,"time":"2023-05-29T23:50:29.758Z","pid":112624,"hostname":"atech","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-05-29T23:50:29.758Z","pid":112624,"hostname":"atech","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-05-29T23:50:29.760Z","pid":112624,"hostname":"atech","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-05-29T23:50:29.760Z","pid":112624,"hostname":"atech","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-05-29T23:50:29.765Z","pid":112624,"hostname":"atech","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2023-05-29T23:50:30.018Z","pid":112624,"hostname":"atech","msg":"End of node method newBrowser"}
+{"level":30,"time":"2023-05-29T23:50:30.022Z","pid":112624,"hostname":"atech","msg":"Start of node method newPage"}
+{"level":30,"time":"2023-05-29T23:50:30.022Z","pid":112624,"hostname":"atech","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2023-05-29T23:50:30.027Z","pid":112624,"hostname":"atech","msg":"Changed active context"}
+{"level":30,"time":"2023-05-29T23:50:30.138Z","pid":112624,"hostname":"atech","msg":"Video path: undefined"}
+{"level":30,"time":"2023-05-29T23:50:30.138Z","pid":112624,"hostname":"atech","msg":"Changed active page"}
+{"level":30,"time":"2023-05-29T23:50:30.830Z","pid":112624,"hostname":"atech","msg":"End of node method newPage"}
+{"level":30,"time":"2023-05-29T23:50:30.834Z","pid":112624,"hostname":"atech","msg":"Start of node method getText"}
+{"level":30,"time":"2023-05-29T23:50:30.834Z","pid":112624,"hostname":"atech","msg":"Strict mode is enabled, find Locator with css=form h1 in page."}
+{"level":30,"time":"2023-05-29T23:50:30.868Z","pid":112624,"hostname":"atech","msg":"Retrieved text for element css=form h1 containing Faça seu cadastro"}
+{"level":30,"time":"2023-05-29T23:50:30.868Z","pid":112624,"hostname":"atech","msg":"End of node method getText"}
+{"level":30,"time":"2023-05-29T23:50:30.871Z","pid":112624,"hostname":"atech","msg":"Start of node method fillText"}
+{"level":30,"time":"2023-05-29T23:50:30.871Z","pid":112624,"hostname":"atech","msg":"Strict mode is enabled, find Locator with css=input[name=name] in page."}
+{"level":30,"time":"2023-05-29T23:50:30.893Z","pid":112624,"hostname":"atech","msg":"End of node method fillText"}
+{"level":30,"time":"2023-05-29T23:50:30.895Z","pid":112624,"hostname":"atech","msg":"Start of node method fillText"}
+{"level":30,"time":"2023-05-29T23:50:30.895Z","pid":112624,"hostname":"atech","msg":"Strict mode is enabled, find Locator with css=input[name=password] in page."}
+{"level":30,"time":"2023-05-29T23:50:30.913Z","pid":112624,"hostname":"atech","msg":"End of node method fillText"}
+{"level":30,"time":"2023-05-29T23:50:30.916Z","pid":112624,"hostname":"atech","msg":"Start of node method click"}
+{"level":30,"time":"2023-05-29T23:50:30.916Z","pid":112624,"hostname":"atech","msg":"Strict mode is enabled, find Locator with css=button[type=submit] >> text=Cadastrar in page."}
+{"level":30,"time":"2023-05-29T23:50:30.975Z","pid":112624,"hostname":"atech","msg":"End of node method click"}
+{"level":30,"time":"2023-05-29T23:50:30.980Z","pid":112624,"hostname":"atech","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2023-05-29T23:50:30.980Z","pid":112624,"hostname":"atech","msg":"Strict mode is enabled, find Locator with css=small[class=alert-error] in page."}
+{"level":30,"time":"2023-05-29T23:50:30.985Z","pid":112624,"hostname":"atech","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2023-05-29T23:50:30.990Z","pid":112624,"hostname":"atech","msg":"Start of node method getText"}
+{"level":30,"time":"2023-05-29T23:50:30.990Z","pid":112624,"hostname":"atech","msg":"Strict mode is enabled, find Locator with css=small[class=alert-error] in page."}
+{"level":30,"time":"2023-05-29T23:50:31.002Z","pid":112624,"hostname":"atech","msg":"Retrieved text for element css=small[class=alert-error] containing Informe seu e-email"}
+{"level":30,"time":"2023-05-29T23:50:31.002Z","pid":112624,"hostname":"atech","msg":"End of node method getText"}
+{"level":30,"time":"2023-05-29T23:50:33.006Z","pid":112624,"hostname":"atech","msg":"Start of node method closeBrowser"}
+{"level":30,"time":"2023-05-29T23:50:33.015Z","pid":112624,"hostname":"atech","msg":"Removed page=f7b74914-0137-4b28-8bf4-8b209fa8f857 from context=56156ff9-e2dc-4dd2-b35a-e8db0c6cc483 page stack"}
+{"level":30,"time":"2023-05-29T23:50:33.084Z","pid":112624,"hostname":"atech","msg":"End of node method closeBrowser"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/home/oseiascaleb/.local/lib/python3.10/site-packages/Browser/wrapper/index.js:9406:15)
+    at PlaywrightServer.getActiveBrowser (/home/oseiascaleb/.local/lib/python3.10/site-packages/Browser/wrapper/index.js:9952:59)
+    at PlaywrightServer.setTimeout (/home/oseiascaleb/.local/lib/python3.10/site-packages/Browser/wrapper/index.js:10197:69)
+    at /home/oseiascaleb/.local/lib/python3.10/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (/home/oseiascaleb/.local/lib/python3.10/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:395:13)
+    at ServerHttp2Stream.onEnd (/home/oseiascaleb/.local/lib/python3.10/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:382:22)
+    at ServerHttp2Stream.emit (node:events:525:35)
+    at endReadableNT (node:internal/streams/readable:1358:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+=============================================================
+{"level":30,"time":"2023-05-29T23:50:33.089Z","pid":112624,"hostname":"atech","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-05-29T23:50:33.089Z","pid":112624,"hostname":"atech","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-05-29T23:50:33.091Z","pid":112624,"hostname":"atech","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-05-29T23:50:33.091Z","pid":112624,"hostname":"atech","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-05-29T23:50:33.095Z","pid":112624,"hostname":"atech","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2023-05-29T23:50:33.324Z","pid":112624,"hostname":"atech","msg":"End of node method newBrowser"}
+{"level":30,"time":"2023-05-29T23:50:33.328Z","pid":112624,"hostname":"atech","msg":"Start of node method newPage"}
+{"level":30,"time":"2023-05-29T23:50:33.328Z","pid":112624,"hostname":"atech","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2023-05-29T23:50:33.335Z","pid":112624,"hostname":"atech","msg":"Changed active context"}
+{"level":30,"time":"2023-05-29T23:50:33.441Z","pid":112624,"hostname":"atech","msg":"Video path: undefined"}
+{"level":30,"time":"2023-05-29T23:50:33.441Z","pid":112624,"hostname":"atech","msg":"Changed active page"}
+{"level":30,"time":"2023-05-29T23:50:34.036Z","pid":112624,"hostname":"atech","msg":"End of node method newPage"}
+{"level":30,"time":"2023-05-29T23:50:34.039Z","pid":112624,"hostname":"atech","msg":"Start of node method getText"}
+{"level":30,"time":"2023-05-29T23:50:34.039Z","pid":112624,"hostname":"atech","msg":"Strict mode is enabled, find Locator with css=form h1 in page."}
+{"level":30,"time":"2023-05-29T23:50:34.070Z","pid":112624,"hostname":"atech","msg":"Retrieved text for element css=form h1 containing Faça seu cadastro"}
+{"level":30,"time":"2023-05-29T23:50:34.070Z","pid":112624,"hostname":"atech","msg":"End of node method getText"}
+{"level":30,"time":"2023-05-29T23:50:34.074Z","pid":112624,"hostname":"atech","msg":"Start of node method fillText"}
+{"level":30,"time":"2023-05-29T23:50:34.074Z","pid":112624,"hostname":"atech","msg":"Strict mode is enabled, find Locator with css=input[name=name] in page."}
+{"level":30,"time":"2023-05-29T23:50:34.102Z","pid":112624,"hostname":"atech","msg":"End of node method fillText"}
+{"level":30,"time":"2023-05-29T23:50:34.105Z","pid":112624,"hostname":"atech","msg":"Start of node method fillText"}
+{"level":30,"time":"2023-05-29T23:50:34.105Z","pid":112624,"hostname":"atech","msg":"Strict mode is enabled, find Locator with css=input[name=email] in page."}
+{"level":30,"time":"2023-05-29T23:50:34.122Z","pid":112624,"hostname":"atech","msg":"End of node method fillText"}
+{"level":30,"time":"2023-05-29T23:50:34.124Z","pid":112624,"hostname":"atech","msg":"Start of node method click"}
+{"level":30,"time":"2023-05-29T23:50:34.124Z","pid":112624,"hostname":"atech","msg":"Strict mode is enabled, find Locator with css=button[type=submit] >> text=Cadastrar in page."}
+{"level":30,"time":"2023-05-29T23:50:34.186Z","pid":112624,"hostname":"atech","msg":"End of node method click"}
+{"level":30,"time":"2023-05-29T23:50:34.191Z","pid":112624,"hostname":"atech","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2023-05-29T23:50:34.191Z","pid":112624,"hostname":"atech","msg":"Strict mode is enabled, find Locator with css=small[class=alert-error] in page."}
+{"level":30,"time":"2023-05-29T23:50:34.202Z","pid":112624,"hostname":"atech","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2023-05-29T23:50:34.207Z","pid":112624,"hostname":"atech","msg":"Start of node method getText"}
+{"level":30,"time":"2023-05-29T23:50:34.207Z","pid":112624,"hostname":"atech","msg":"Strict mode is enabled, find Locator with css=small[class=alert-error] in page."}
+{"level":30,"time":"2023-05-29T23:50:34.216Z","pid":112624,"hostname":"atech","msg":"Retrieved text for element css=small[class=alert-error] containing Informe uma senha com pelo menos 6 digitos"}
+{"level":30,"time":"2023-05-29T23:50:34.216Z","pid":112624,"hostname":"atech","msg":"End of node method getText"}
+{"level":30,"time":"2023-05-29T23:50:36.220Z","pid":112624,"hostname":"atech","msg":"Start of node method closeBrowser"}
+{"level":30,"time":"2023-05-29T23:50:36.231Z","pid":112624,"hostname":"atech","msg":"Removed page=96dd6570-9b34-458e-a7bb-20418b7209e2 from context=866e912c-d712-47d6-b470-5dbc2fd96f78 page stack"}
+{"level":30,"time":"2023-05-29T23:50:36.302Z","pid":112624,"hostname":"atech","msg":"End of node method closeBrowser"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/home/oseiascaleb/.local/lib/python3.10/site-packages/Browser/wrapper/index.js:9406:15)
+    at PlaywrightServer.getActiveBrowser (/home/oseiascaleb/.local/lib/python3.10/site-packages/Browser/wrapper/index.js:9952:59)
+    at PlaywrightServer.setTimeout (/home/oseiascaleb/.local/lib/python3.10/site-packages/Browser/wrapper/index.js:10197:69)
+    at /home/oseiascaleb/.local/lib/python3.10/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (/home/oseiascaleb/.local/lib/python3.10/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:395:13)
+    at ServerHttp2Stream.onEnd (/home/oseiascaleb/.local/lib/python3.10/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:382:22)
+    at ServerHttp2Stream.emit (node:events:525:35)
+    at endReadableNT (node:internal/streams/readable:1358:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+=============================================================
+{"level":30,"time":"2023-05-29T23:50:36.308Z","pid":112624,"hostname":"atech","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-05-29T23:50:36.308Z","pid":112624,"hostname":"atech","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/home/oseiascaleb/.local/lib/python3.10/site-packages/Browser/wrapper/index.js:9406:15)
+    at PlaywrightServer.getActiveBrowser (/home/oseiascaleb/.local/lib/python3.10/site-packages/Browser/wrapper/index.js:9952:59)
+    at PlaywrightServer.setTimeout (/home/oseiascaleb/.local/lib/python3.10/site-packages/Browser/wrapper/index.js:10197:69)
+    at /home/oseiascaleb/.local/lib/python3.10/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (/home/oseiascaleb/.local/lib/python3.10/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:395:13)
+    at ServerHttp2Stream.onEnd (/home/oseiascaleb/.local/lib/python3.10/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:382:22)
+    at ServerHttp2Stream.emit (node:events:525:35)
+    at endReadableNT (node:internal/streams/readable:1358:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+=============================================================
+{"level":30,"time":"2023-05-29T23:50:36.316Z","pid":112624,"hostname":"atech","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-05-29T23:50:36.316Z","pid":112624,"hostname":"atech","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-05-29T23:50:36.340Z","pid":112624,"hostname":"atech","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2023-05-29T23:50:36.340Z","pid":112624,"hostname":"atech","msg":"End of node method closeAllBrowsers"}

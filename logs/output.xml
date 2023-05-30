@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.10.6 on linux)" generated="20230529 20:50:25.963" rpa="false" schemaversion="3">
+<suite id="s1" name="Cadastro" source="/home/oseiascaleb/QAx/projects/atech-robot-framework/cadastro.robot">
+<test id="s1-t1" name="Cadastrar usuario sem username - username obrigatorio" line="12">
+<kw name="Start Session">
+<kw name="New Browser" library="Browser">
+<arg>browser=chromium</arg>
+<arg>headless=false</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<msg timestamp="20230529 20:50:26.522" level="INFO">{"browser": "chromium", "headless": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "deprecated_pos_args": [], "tracesDir": "/home/oseiascaleb/QAx/projects/atech-robot-framework/logs/browser/traces/6646abf1-4ff5-490b-b506-d142aa4f4666"}</msg>
+<msg timestamp="20230529 20:50:26.727" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"deprecated_pos_args":[],"tracesDir":"/home/oseiascaleb/QAx/projects/atech-robot-framework/logs/browser/traces/6646abf1-4ff5-490b-b506-d142aa4f4666"}</msg>
+<status status="PASS" starttime="20230529 20:50:26.522" endtime="20230529 20:50:26.727"/>
+</kw>
+<kw name="New Page" library="Browser">
+<arg>http://localhost:3000/signup</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<msg timestamp="20230529 20:50:27.464" level="INFO">Successfully initialized new page object and opened url: http://localhost:3000/signup</msg>
+<msg timestamp="20230529 20:50:27.464" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<status status="PASS" starttime="20230529 20:50:26.727" endtime="20230529 20:50:27.464"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<arg>css=form h1</arg>
+<arg>equal</arg>
+<arg>Faça seu cadastro</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20230529 20:50:27.512" level="INFO">Text: 'Faça seu cadastro'</msg>
+<status status="PASS" starttime="20230529 20:50:27.465" endtime="20230529 20:50:27.512"/>
+</kw>
+<status status="PASS" starttime="20230529 20:50:26.521" endtime="20230529 20:50:27.512"/>
+</kw>
+<kw name="Cadastrar Usuario sem username">
+<arg>${user}[email]</arg>
+<arg>${user}[password]</arg>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=email]</arg>
+<arg>${email}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230529 20:50:27.513" level="INFO">Fills the text 'oseiascaleb@atech.com' in the given field.</msg>
+<status status="PASS" starttime="20230529 20:50:27.513" endtime="20230529 20:50:27.544"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=password]</arg>
+<arg>${password}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230529 20:50:27.545" level="INFO">Fills the text '123456' in the given field.</msg>
+<status status="PASS" starttime="20230529 20:50:27.544" endtime="20230529 20:50:27.563"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>css=button[type=submit] &gt;&gt; text=Cadastrar</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230529 20:50:27.564" endtime="20230529 20:50:27.626"/>
+</kw>
+<status status="PASS" starttime="20230529 20:50:27.512" endtime="20230529 20:50:27.626"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${notice}</var>
+<arg>css=small[class=alert-error]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230529 20:50:27.627" level="INFO">${notice} = css=small[class=alert-error]</msg>
+<status status="PASS" starttime="20230529 20:50:27.627" endtime="20230529 20:50:27.627"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${message}</var>
+<arg>Informe seu nome completo</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230529 20:50:27.628" level="INFO">${message} = Informe seu nome completo</msg>
+<status status="PASS" starttime="20230529 20:50:27.627" endtime="20230529 20:50:27.628"/>
+</kw>
+<kw name="Wait For Elements State" library="Browser">
+<arg>${notice}</arg>
+<arg>visible</arg>
+<arg>2</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20230529 20:50:27.639" level="INFO">Waited for Element with selector css=small[class=alert-error] at state visible</msg>
+<status status="PASS" starttime="20230529 20:50:27.628" endtime="20230529 20:50:27.639"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<arg>${notice}</arg>
+<arg>equal</arg>
+<arg>${message}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20230529 20:50:27.655" level="INFO">Text: 'Informe seu nome completo'</msg>
+<status status="PASS" starttime="20230529 20:50:27.639" endtime="20230529 20:50:27.655"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230529 20:50:29.656" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230529 20:50:27.655" endtime="20230529 20:50:29.656"/>
+</kw>
+<kw name="Close Browser" library="Browser">
+<arg>CURRENT</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<msg timestamp="20230529 20:50:29.752" level="INFO">Closed browser</msg>
+<status status="PASS" starttime="20230529 20:50:29.656" endtime="20230529 20:50:29.752"/>
+</kw>
+<status status="PASS" starttime="20230529 20:50:26.518" endtime="20230529 20:50:29.753"/>
+</test>
+<test id="s1-t2" name="Cadastrar usuario sem email - email obrigatorio" line="23">
+<kw name="Start Session">
+<kw name="New Browser" library="Browser">
+<arg>browser=chromium</arg>
+<arg>headless=false</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<msg timestamp="20230529 20:50:29.763" level="INFO">{"browser": "chromium", "headless": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "deprecated_pos_args": [], "tracesDir": "/home/oseiascaleb/QAx/projects/atech-robot-framework/logs/browser/traces/7a8c40ac-d54d-489e-823a-28cecd3b1c9c"}</msg>
+<msg timestamp="20230529 20:50:30.019" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"deprecated_pos_args":[],"tracesDir":"/home/oseiascaleb/QAx/projects/atech-robot-framework/logs/browser/traces/7a8c40ac-d54d-489e-823a-28cecd3b1c9c"}</msg>
+<status status="PASS" starttime="20230529 20:50:29.762" endtime="20230529 20:50:30.020"/>
+</kw>
+<kw name="New Page" library="Browser">
+<arg>http://localhost:3000/signup</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<msg timestamp="20230529 20:50:30.831" level="INFO">Successfully initialized new page object and opened url: http://localhost:3000/signup</msg>
+<msg timestamp="20230529 20:50:30.832" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<status status="PASS" starttime="20230529 20:50:30.020" endtime="20230529 20:50:30.832"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<arg>css=form h1</arg>
+<arg>equal</arg>
+<arg>Faça seu cadastro</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20230529 20:50:30.869" level="INFO">Text: 'Faça seu cadastro'</msg>
+<status status="PASS" starttime="20230529 20:50:30.832" endtime="20230529 20:50:30.869"/>
+</kw>
+<status status="PASS" starttime="20230529 20:50:29.762" endtime="20230529 20:50:30.869"/>
+</kw>
+<kw name="Cadastrar Usuario sem email">
+<arg>${user}[name]</arg>
+<arg>${user}[password]</arg>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=name]</arg>
+<arg>${name}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230529 20:50:30.870" level="INFO">Fills the text 'Oséias Caleb' in the given field.</msg>
+<status status="PASS" starttime="20230529 20:50:30.870" endtime="20230529 20:50:30.894"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=password]</arg>
+<arg>${password}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230529 20:50:30.895" level="INFO">Fills the text '123456' in the given field.</msg>
+<status status="PASS" starttime="20230529 20:50:30.894" endtime="20230529 20:50:30.914"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>css=button[type=submit] &gt;&gt; text=Cadastrar</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230529 20:50:30.914" endtime="20230529 20:50:30.976"/>
+</kw>
+<status status="PASS" starttime="20230529 20:50:30.870" endtime="20230529 20:50:30.977"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${notice}</var>
+<arg>css=small[class=alert-error]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230529 20:50:30.978" level="INFO">${notice} = css=small[class=alert-error]</msg>
+<status status="PASS" starttime="20230529 20:50:30.977" endtime="20230529 20:50:30.978"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${message}</var>
+<arg>Informe seu e-email</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230529 20:50:30.978" level="INFO">${message} = Informe seu e-email</msg>
+<status status="PASS" starttime="20230529 20:50:30.978" endtime="20230529 20:50:30.978"/>
+</kw>
+<kw name="Wait For Elements State" library="Browser">
+<arg>${notice}</arg>
+<arg>visible</arg>
+<arg>2</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20230529 20:50:30.987" level="INFO">Waited for Element with selector css=small[class=alert-error] at state visible</msg>
+<status status="PASS" starttime="20230529 20:50:30.979" endtime="20230529 20:50:30.987"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<arg>${notice}</arg>
+<arg>equal</arg>
+<arg>${message}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20230529 20:50:31.003" level="INFO">Text: 'Informe seu e-email'</msg>
+<status status="PASS" starttime="20230529 20:50:30.988" endtime="20230529 20:50:31.003"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230529 20:50:33.004" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230529 20:50:31.004" endtime="20230529 20:50:33.005"/>
+</kw>
+<kw name="Close Browser" library="Browser">
+<arg>CURRENT</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<msg timestamp="20230529 20:50:33.086" level="INFO">Closed browser</msg>
+<status status="PASS" starttime="20230529 20:50:33.005" endtime="20230529 20:50:33.086"/>
+</kw>
+<status status="PASS" starttime="20230529 20:50:29.759" endtime="20230529 20:50:33.086"/>
+</test>
+<test id="s1-t3" name="Cadastrar usuario sem password - password obrigatorio" line="34">
+<kw name="Start Session">
+<kw name="New Browser" library="Browser">
+<arg>browser=chromium</arg>
+<arg>headless=false</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<msg timestamp="20230529 20:50:33.094" level="INFO">{"browser": "chromium", "headless": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "deprecated_pos_args": [], "tracesDir": "/home/oseiascaleb/QAx/projects/atech-robot-framework/logs/browser/traces/bdb4e62f-2aca-4426-91f6-b2e06054561b"}</msg>
+<msg timestamp="20230529 20:50:33.326" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"deprecated_pos_args":[],"tracesDir":"/home/oseiascaleb/QAx/projects/atech-robot-framework/logs/browser/traces/bdb4e62f-2aca-4426-91f6-b2e06054561b"}</msg>
+<status status="PASS" starttime="20230529 20:50:33.093" endtime="20230529 20:50:33.326"/>
+</kw>
+<kw name="New Page" library="Browser">
+<arg>http://localhost:3000/signup</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<msg timestamp="20230529 20:50:34.037" level="INFO">Successfully initialized new page object and opened url: http://localhost:3000/signup</msg>
+<msg timestamp="20230529 20:50:34.037" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<status status="PASS" starttime="20230529 20:50:33.326" endtime="20230529 20:50:34.037"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<arg>css=form h1</arg>
+<arg>equal</arg>
+<arg>Faça seu cadastro</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20230529 20:50:34.072" level="INFO">Text: 'Faça seu cadastro'</msg>
+<status status="PASS" starttime="20230529 20:50:34.038" endtime="20230529 20:50:34.072"/>
+</kw>
+<status status="PASS" starttime="20230529 20:50:33.093" endtime="20230529 20:50:34.072"/>
+</kw>
+<kw name="Cadastrar Usuario sem password">
+<arg>${user}[name]</arg>
+<arg>${user}[email]</arg>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=name]</arg>
+<arg>${name}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230529 20:50:34.073" level="INFO">Fills the text 'Oséias Caleb' in the given field.</msg>
+<status status="PASS" starttime="20230529 20:50:34.073" endtime="20230529 20:50:34.104"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=email]</arg>
+<arg>${email}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230529 20:50:34.105" level="INFO">Fills the text 'oseiascaleb@atech.com' in the given field.</msg>
+<status status="PASS" starttime="20230529 20:50:34.104" endtime="20230529 20:50:34.123"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>css=button[type=submit] &gt;&gt; text=Cadastrar</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230529 20:50:34.123" endtime="20230529 20:50:34.187"/>
+</kw>
+<status status="PASS" starttime="20230529 20:50:34.072" endtime="20230529 20:50:34.188"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${notice}</var>
+<arg>css=small[class=alert-error]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230529 20:50:34.188" level="INFO">${notice} = css=small[class=alert-error]</msg>
+<status status="PASS" starttime="20230529 20:50:34.188" endtime="20230529 20:50:34.188"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${message}</var>
+<arg>Informe uma senha com pelo menos 6 digitos</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230529 20:50:34.189" level="INFO">${message} = Informe uma senha com pelo menos 6 digitos</msg>
+<status status="PASS" starttime="20230529 20:50:34.189" endtime="20230529 20:50:34.189"/>
+</kw>
+<kw name="Wait For Elements State" library="Browser">
+<arg>${notice}</arg>
+<arg>visible</arg>
+<arg>2</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20230529 20:50:34.204" level="INFO">Waited for Element with selector css=small[class=alert-error] at state visible</msg>
+<status status="PASS" starttime="20230529 20:50:34.189" endtime="20230529 20:50:34.205"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<arg>${notice}</arg>
+<arg>equal</arg>
+<arg>${message}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20230529 20:50:34.217" level="INFO">Text: 'Informe uma senha com pelo menos 6 digitos'</msg>
+<status status="PASS" starttime="20230529 20:50:34.205" endtime="20230529 20:50:34.217"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230529 20:50:36.218" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230529 20:50:34.218" endtime="20230529 20:50:36.218"/>
+</kw>
+<kw name="Close Browser" library="Browser">
+<arg>CURRENT</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<msg timestamp="20230529 20:50:36.304" level="INFO">Closed browser</msg>
+<status status="PASS" starttime="20230529 20:50:36.219" endtime="20230529 20:50:36.304"/>
+</kw>
+<status status="PASS" starttime="20230529 20:50:33.090" endtime="20230529 20:50:36.305"/>
+</test>
+<status status="PASS" starttime="20230529 20:50:25.964" endtime="20230529 20:50:36.310"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="Cadastro">Cadastro</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
